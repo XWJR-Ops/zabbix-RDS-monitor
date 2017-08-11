@@ -1,7 +1,8 @@
 # zabbix-RDS-monitor
 Aliyun RDS-mysql status monitor with zabbix   
    
-zabbix通过阿里云api 自动发现、监控阿里云RDS-Mysql数据库
+zabbix通过阿里云api 自动发现、监控阿里云RDS-Mysql数据库   
+本版本数据的图表展示，是以**监控项进行分组**，后期会再发布**以rds实例分组**的版本。
 ## 使用方法
 ### 环境要求
 python = 2.7
