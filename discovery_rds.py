@@ -26,7 +26,7 @@ def GetRdsList():
             DBInstanceIdList.append(DBInstanceIdDict)
         except Exception, e:
             print Exception, ":", e
-            pass
+            
 
 
 GetRdsList()
