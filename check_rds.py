@@ -38,7 +38,7 @@ def GetPerformance(DBInstanceId,MasterKey,IndexNum,StartTime,EndTime):
     Performance.set_StartTime(StartTime)
     Performance.set_EndTime(EndTime)
     PerformanceInfo = clt.do_action_with_exception(Performance)
-    print PerformanceInfo
+    #print PerformanceInfo
     Info = (json.loads(PerformanceInfo))
     Value = Info['PerformanceKeys']['PerformanceKey'][0]['Values']['PerformanceValue'][-1]['Value']
     print str(Value).split('&')[IndexNum]
