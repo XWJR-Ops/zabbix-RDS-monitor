@@ -1,3 +1,4 @@
+#coding=UTF-8
 #Auther：xwjr.com
 from aliyunsdkcore import client
 from aliyunsdkrds.request.v20140815 import DescribeDBInstancesRequest
@@ -19,9 +20,13 @@ def GetRdsList():
     RdsInfo = clt.do_action_with_exception(RdsRequest)
     for RdsInfoJson in (json.loads(RdsInfo))['Items']['DBInstance']:
         DBInstanceIdDict = {}
-        DBInstanceIdDict["{#DBINSTANCEID}"] = RdsInfoJson['DBInstanceId']
-        DBInstanceIdDict["{#DBINSTANCEDESCRIPTION}"] = RdsInfoJson['DBInstanceDescription']
-        DBInstanceIdList.append(DBInstanceIdDict)
+        try:
+            DBInstanceIdDict["{#DBINSTANCEID}"] = RdsInfoJson['DBInstanceId']
+            DBInstanceIdDict["{#DBINSTANCEDESCRIPTION}"] = RdsInfoJson['DBInstanceDescription']
+            DBInstanceIdList.append(DBInstanceIdDict)
+        except Exception, e:
+            print Exception, ":", e
+            pass
 
 
 GetRdsList()
