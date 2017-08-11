@@ -26,6 +26,7 @@ def GetRdsList():
             DBInstanceIdList.append(DBInstanceIdDict)
         except Exception, e:
             print Exception, ":", e
+            print "Please check the RDS alias !Alias must not be the same as DBInstanceId！！！"
             
 
 
