@@ -14,7 +14,7 @@ Type = sys.argv[1]
 DBInstanceId = sys.argv[2]
 Key = sys.argv[3]
 
-
+# 阿里云返回的数据为UTC时间，因此要转换为东八区时间。其他时区同理。
 UTC_End = datetime.datetime.today() - datetime.timedelta(hours=8)
 UTC_Start = UTC_End - datetime.timedelta(minutes=25)
 
