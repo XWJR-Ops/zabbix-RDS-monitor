@@ -13,7 +13,7 @@ zabbix通过阿里云api 自动发现、监控阿里云RDS-Mysql数据库  
 python = 2.7
 ### 模块安装
 ```shell
-/usr/local/python2.7/bin/pip2.7 install aliyun-python-sdk-core==2.3.5 aliyun-python-sdk-rds datetime
+/usr/local/python2.7/bin/pip2.7 install aliyun-python-sdk-core==2.3.5 aliyun-python-sdk-rds==2.1.4 datetime
 ```
 ### 使用方法
 1. 从阿里云控制台获取 **AccessKey** ,并修改脚本中的 **ID** 与 **Secret**
