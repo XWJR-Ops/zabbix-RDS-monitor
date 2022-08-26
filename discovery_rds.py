@@ -25,11 +25,11 @@ def GetRdsList():
             DBInstanceIdDict["{#DBINSTANCEDESCRIPTION}"] = RdsInfoJson['DBInstanceDescription']
             DBInstanceIdList.append(DBInstanceIdDict)
         except Exception, e:
-            print Exception, ":", e
-            print "Please check the RDS alias !Alias must not be the same as DBInstanceId！！！"
+            print(Exception, ":", e)
+            print("Please check the RDS alias !Alias must not be the same as DBInstanceId！！！")
             
 
 
 GetRdsList()
 ZabbixDataDict['data'] = DBInstanceIdList
-print json.dumps(ZabbixDataDict)
+print(json.dumps(ZabbixDataDict))
