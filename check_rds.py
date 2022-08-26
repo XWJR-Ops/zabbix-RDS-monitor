@@ -28,7 +28,7 @@ def GetResourceUsage(DBInstanceId,Key):
     ResourceUsageInfo = clt.do_action_with_exception(ResourceUsage)
     #print ResourceUsageInfo
     Info = (json.loads(ResourceUsageInfo))[Key]
-    print Info
+    print(Info)
 
 def GetPerformance(DBInstanceId,MasterKey,IndexNum,StartTime,EndTime):
     Performance = DescribeDBInstancePerformanceRequest.DescribeDBInstancePerformanceRequest()
@@ -38,10 +38,10 @@ def GetPerformance(DBInstanceId,MasterKey,IndexNum,StartTime,EndTime):
     Performance.set_StartTime(StartTime)
     Performance.set_EndTime(EndTime)
     PerformanceInfo = clt.do_action_with_exception(Performance)
-    #print PerformanceInfo
+    #print(PerformanceInfo
     Info = (json.loads(PerformanceInfo))
     Value = Info['PerformanceKeys']['PerformanceKey'][0]['Values']['PerformanceValue'][-1]['Value']
-    print str(Value).split('&')[IndexNum]
+    print(str(Value).split('&')[IndexNum])
 
 
 if (Type == "Disk"):
